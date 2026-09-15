@@ -1,0 +1,1265 @@
+package com.example.data.footballers
+
+import com.example.data.model.Footballer
+import com.example.data.model.PlayerStat
+
+object FootballerData {
+
+    private fun avatar(name: String): String {
+        return "https://api.dicebear.com/9.x/personas/png?seed=${name.replace(" ", "%20")}"
+    }
+
+    val allFootballers: List<Footballer> = listOf(
+        // === PREMIER LEAGUE LEGENDS & STARS ===
+        Footballer(
+            id = "alan-shearer",
+            name = "Alan Shearer",
+            nationality = "İngiltere",
+            position = "Forvet",
+            photoUrl = avatar("Alan Shearer"),
+            clubName = "Newcastle / Blackburn",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 379),
+                PlayerStat("Kariyer", "appearances", 734),
+                PlayerStat("Kariyer", "assists", 78),
+                PlayerStat("Premier League", "goals", 260),
+                PlayerStat("Premier League", "appearances", 441),
+                PlayerStat("Premier League", "assists", 64),
+                PlayerStat("International", "goals", 30),
+                PlayerStat("International", "appearances", 63)
+            )
+        ),
+        Footballer(
+            id = "harry-kane",
+            name = "Harry Kane",
+            nationality = "İngiltere",
+            position = "Forvet",
+            photoUrl = avatar("Harry Kane"),
+            clubName = "Bayern München / Spurs",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Bundesliga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 412),
+                PlayerStat("Kariyer", "appearances", 645),
+                PlayerStat("Kariyer", "assists", 98),
+                PlayerStat("Premier League", "goals", 213),
+                PlayerStat("Premier League", "appearances", 320),
+                PlayerStat("Premier League", "assists", 46),
+                PlayerStat("Bundesliga", "goals", 45),
+                PlayerStat("Bundesliga", "appearances", 42),
+                PlayerStat("Champions League", "goals", 39),
+                PlayerStat("International", "goals", 68),
+                PlayerStat("International", "appearances", 100)
+            )
+        ),
+        Footballer(
+            id = "wayne-rooney",
+            name = "Wayne Rooney",
+            nationality = "İngiltere",
+            position = "Forvet",
+            photoUrl = avatar("Wayne Rooney"),
+            clubName = "Manchester United",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 366),
+                PlayerStat("Kariyer", "appearances", 883),
+                PlayerStat("Kariyer", "assists", 188),
+                PlayerStat("Kariyer", "trophies", 16),
+                PlayerStat("Premier League", "goals", 208),
+                PlayerStat("Premier League", "appearances", 491),
+                PlayerStat("Premier League", "assists", 103),
+                PlayerStat("Champions League", "goals", 30),
+                PlayerStat("Champions League", "appearances", 85),
+                PlayerStat("International", "goals", 53),
+                PlayerStat("International", "appearances", 120)
+            )
+        ),
+        Footballer(
+            id = "mohamed-salah",
+            name = "Mohamed Salah",
+            nationality = "Mısır",
+            position = "Kanat",
+            photoUrl = avatar("Mohamed Salah"),
+            clubName = "Liverpool",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 345),
+                PlayerStat("Kariyer", "appearances", 690),
+                PlayerStat("Kariyer", "assists", 154),
+                PlayerStat("Premier League", "goals", 184),
+                PlayerStat("Premier League", "appearances", 295),
+                PlayerStat("Premier League", "assists", 78),
+                PlayerStat("Serie A", "goals", 35),
+                PlayerStat("Serie A", "appearances", 81),
+                PlayerStat("Champions League", "goals", 45),
+                PlayerStat("International", "goals", 56),
+                PlayerStat("International", "appearances", 100)
+            )
+        ),
+        Footballer(
+            id = "sergio-aguero",
+            name = "Sergio Agüero",
+            nationality = "Arjantin",
+            position = "Forvet",
+            photoUrl = avatar("Sergio Aguero"),
+            clubName = "Manchester City / Atletico",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 427),
+                PlayerStat("Kariyer", "appearances", 786),
+                PlayerStat("Kariyer", "assists", 118),
+                PlayerStat("Premier League", "goals", 184),
+                PlayerStat("Premier League", "appearances", 275),
+                PlayerStat("Premier League", "assists", 47),
+                PlayerStat("La Liga", "goals", 75),
+                PlayerStat("La Liga", "appearances", 179),
+                PlayerStat("Champions League", "goals", 41),
+                PlayerStat("International", "goals", 41),
+                PlayerStat("International", "appearances", 101)
+            )
+        ),
+        Footballer(
+            id = "thierry-henry",
+            name = "Thierry Henry",
+            nationality = "Fransa",
+            position = "Forvet",
+            photoUrl = avatar("Thierry Henry"),
+            clubName = "Arsenal / Barcelona",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 411),
+                PlayerStat("Kariyer", "appearances", 917),
+                PlayerStat("Kariyer", "assists", 205),
+                PlayerStat("Premier League", "goals", 175),
+                PlayerStat("Premier League", "appearances", 258),
+                PlayerStat("Premier League", "assists", 74),
+                PlayerStat("La Liga", "goals", 35),
+                PlayerStat("La Liga", "appearances", 80),
+                PlayerStat("Champions League", "goals", 50),
+                PlayerStat("International", "goals", 51),
+                PlayerStat("International", "appearances", 123)
+            )
+        ),
+        Footballer(
+            id = "frank-lampard",
+            name = "Frank Lampard",
+            nationality = "İngiltere",
+            position = "Orta Saha",
+            photoUrl = avatar("Frank Lampard"),
+            clubName = "Chelsea",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 303),
+                PlayerStat("Kariyer", "appearances", 1019),
+                PlayerStat("Kariyer", "assists", 175),
+                PlayerStat("Premier League", "goals", 177),
+                PlayerStat("Premier League", "appearances", 609),
+                PlayerStat("Premier League", "assists", 102),
+                PlayerStat("Champions League", "goals", 23),
+                PlayerStat("International", "goals", 29),
+                PlayerStat("International", "appearances", 106)
+            )
+        ),
+        Footballer(
+            id = "steven-gerrard",
+            name = "Steven Gerrard",
+            nationality = "İngiltere",
+            position = "Orta Saha",
+            photoUrl = avatar("Steven Gerrard"),
+            clubName = "Liverpool",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 212),
+                PlayerStat("Kariyer", "appearances", 860),
+                PlayerStat("Kariyer", "assists", 168),
+                PlayerStat("Premier League", "goals", 120),
+                PlayerStat("Premier League", "appearances", 504),
+                PlayerStat("Premier League", "assists", 92),
+                PlayerStat("Champions League", "goals", 21),
+                PlayerStat("International", "goals", 21),
+                PlayerStat("International", "appearances", 114)
+            )
+        ),
+        Footballer(
+            id = "ryan-giggs",
+            name = "Ryan Giggs",
+            nationality = "Galler",
+            position = "Kanat",
+            photoUrl = avatar("Ryan Giggs"),
+            clubName = "Manchester United",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 168),
+                PlayerStat("Kariyer", "appearances", 963),
+                PlayerStat("Kariyer", "assists", 258),
+                PlayerStat("Kariyer", "trophies", 35),
+                PlayerStat("Premier League", "goals", 109),
+                PlayerStat("Premier League", "appearances", 632),
+                PlayerStat("Premier League", "assists", 162),
+                PlayerStat("Champions League", "goals", 28),
+                PlayerStat("Champions League", "appearances", 145),
+                PlayerStat("International", "goals", 12)
+            )
+        ),
+        Footballer(
+            id = "kevin-de-bruyne",
+            name = "Kevin De Bruyne",
+            nationality = "Belçika",
+            position = "Orta Saha",
+            photoUrl = avatar("Kevin De Bruyne"),
+            clubName = "Manchester City",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Bundesliga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 175),
+                PlayerStat("Kariyer", "appearances", 710),
+                PlayerStat("Kariyer", "assists", 285),
+                PlayerStat("Premier League", "goals", 70),
+                PlayerStat("Premier League", "appearances", 260),
+                PlayerStat("Premier League", "assists", 112),
+                PlayerStat("Bundesliga", "goals", 23),
+                PlayerStat("Bundesliga", "appearances", 73),
+                PlayerStat("Bundesliga", "assists", 29),
+                PlayerStat("Champions League", "goals", 16),
+                PlayerStat("International", "goals", 28),
+                PlayerStat("International", "appearances", 105)
+            )
+        ),
+        Footballer(
+            id = "didier-drogba",
+            name = "Didier Drogba",
+            nationality = "Fildişi Sahili",
+            position = "Forvet",
+            photoUrl = avatar("Didier Drogba"),
+            clubName = "Chelsea / Marsilya",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Ligue 1", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 302),
+                PlayerStat("Kariyer", "appearances", 685),
+                PlayerStat("Kariyer", "assists", 125),
+                PlayerStat("Premier League", "goals", 104),
+                PlayerStat("Premier League", "appearances", 254),
+                PlayerStat("Premier League", "assists", 55),
+                PlayerStat("Ligue 1", "goals", 39),
+                PlayerStat("Ligue 1", "appearances", 80),
+                PlayerStat("Champions League", "goals", 44),
+                PlayerStat("International", "goals", 65),
+                PlayerStat("International", "appearances", 105)
+            )
+        ),
+        Footballer(
+            id = "son-heung-min",
+            name = "Son Heung-min",
+            nationality = "Güney Kore",
+            position = "Kanat",
+            photoUrl = avatar("Son Heung-min"),
+            clubName = "Tottenham Hotspur",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Bundesliga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 248),
+                PlayerStat("Kariyer", "appearances", 650),
+                PlayerStat("Kariyer", "assists", 115),
+                PlayerStat("Premier League", "goals", 124),
+                PlayerStat("Premier League", "appearances", 330),
+                PlayerStat("Premier League", "assists", 67),
+                PlayerStat("Bundesliga", "goals", 41),
+                PlayerStat("Bundesliga", "appearances", 135),
+                PlayerStat("Champions League", "goals", 19),
+                PlayerStat("International", "goals", 49),
+                PlayerStat("International", "appearances", 130)
+            )
+        ),
+        Footballer(
+            id = "eden-hazard",
+            name = "Eden Hazard",
+            nationality = "Belçika",
+            position = "Kanat",
+            photoUrl = avatar("Eden Hazard"),
+            clubName = "Chelsea / Lille / Real Madrid",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Ligue 1", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 200),
+                PlayerStat("Kariyer", "appearances", 749),
+                PlayerStat("Kariyer", "assists", 193),
+                PlayerStat("Premier League", "goals", 85),
+                PlayerStat("Premier League", "appearances", 245),
+                PlayerStat("Premier League", "assists", 54),
+                PlayerStat("Ligue 1", "goals", 36),
+                PlayerStat("Ligue 1", "appearances", 147),
+                PlayerStat("La Liga", "goals", 4),
+                PlayerStat("Champions League", "goals", 10),
+                PlayerStat("International", "goals", 33),
+                PlayerStat("International", "appearances", 126)
+            )
+        ),
+        Footballer(
+            id = "jamie-vardy",
+            name = "Jamie Vardy",
+            nationality = "İngiltere",
+            position = "Forvet",
+            photoUrl = avatar("Jamie Vardy"),
+            clubName = "Leicester City",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 220),
+                PlayerStat("Kariyer", "appearances", 540),
+                PlayerStat("Kariyer", "assists", 68),
+                PlayerStat("Premier League", "goals", 140),
+                PlayerStat("Premier League", "appearances", 325),
+                PlayerStat("Premier League", "assists", 45),
+                PlayerStat("International", "goals", 7),
+                PlayerStat("International", "appearances", 26)
+            )
+        ),
+        Footballer(
+            id = "sadio-mane",
+            name = "Sadio Mané",
+            nationality = "Senegal",
+            position = "Kanat",
+            photoUrl = avatar("Sadio Mane"),
+            clubName = "Liverpool / Bayern",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Bundesliga", "Ligue 1", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 235),
+                PlayerStat("Kariyer", "appearances", 590),
+                PlayerStat("Kariyer", "assists", 108),
+                PlayerStat("Premier League", "goals", 111),
+                PlayerStat("Premier League", "appearances", 263),
+                PlayerStat("Premier League", "assists", 38),
+                PlayerStat("Bundesliga", "goals", 7),
+                PlayerStat("Bundesliga", "appearances", 25),
+                PlayerStat("Champions League", "goals", 27),
+                PlayerStat("International", "goals", 45),
+                PlayerStat("International", "appearances", 107)
+            )
+        ),
+        Footballer(
+            id = "petr-cech",
+            name = "Petr Čech",
+            nationality = "Çekya",
+            position = "Kaleci",
+            photoUrl = avatar("Petr Cech"),
+            clubName = "Chelsea / Arsenal",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "cleanSheets", 391),
+                PlayerStat("Kariyer", "appearances", 963),
+                PlayerStat("Premier League", "cleanSheets", 202),
+                PlayerStat("Premier League", "appearances", 443),
+                PlayerStat("Champions League", "cleanSheets", 49),
+                PlayerStat("Champions League", "appearances", 111),
+                PlayerStat("International", "appearances", 124)
+            )
+        ),
+        Footballer(
+            id = "ederson",
+            name = "Ederson",
+            nationality = "Brezilya",
+            position = "Kaleci",
+            photoUrl = avatar("Ederson"),
+            clubName = "Manchester City",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "cleanSheets", 215),
+                PlayerStat("Kariyer", "appearances", 490),
+                PlayerStat("Premier League", "cleanSheets", 114),
+                PlayerStat("Premier League", "appearances", 260),
+                PlayerStat("Champions League", "cleanSheets", 31),
+                PlayerStat("Champions League", "appearances", 78)
+            )
+        ),
+        Footballer(
+            id = "alisson-becker",
+            name = "Alisson Becker",
+            nationality = "Brezilya",
+            position = "Kaleci",
+            photoUrl = avatar("Alisson Becker"),
+            clubName = "Liverpool / Roma",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "cleanSheets", 195),
+                PlayerStat("Kariyer", "appearances", 440),
+                PlayerStat("Premier League", "cleanSheets", 92),
+                PlayerStat("Premier League", "appearances", 212),
+                PlayerStat("Serie A", "cleanSheets", 22),
+                PlayerStat("Serie A", "appearances", 37),
+                PlayerStat("Champions League", "cleanSheets", 27),
+                PlayerStat("Champions League", "appearances", 65),
+                PlayerStat("International", "appearances", 70)
+            )
+        ),
+        Footballer(
+            id = "paul-scholes",
+            name = "Paul Scholes",
+            nationality = "İngiltere",
+            position = "Orta Saha",
+            photoUrl = avatar("Paul Scholes"),
+            clubName = "Manchester United",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 169),
+                PlayerStat("Kariyer", "appearances", 784),
+                PlayerStat("Kariyer", "assists", 102),
+                PlayerStat("Kariyer", "trophies", 25),
+                PlayerStat("Premier League", "goals", 107),
+                PlayerStat("Premier League", "appearances", 499),
+                PlayerStat("Premier League", "assists", 55),
+                PlayerStat("Champions League", "goals", 24),
+                PlayerStat("Champions League", "appearances", 124),
+                PlayerStat("International", "goals", 14),
+                PlayerStat("International", "appearances", 66)
+            )
+        ),
+        Footballer(
+            id = "robin-van-persie",
+            name = "Robin van Persie",
+            nationality = "Hollanda",
+            position = "Forvet",
+            photoUrl = avatar("Robin van Persie"),
+            clubName = "Arsenal / Man Utd",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 322),
+                PlayerStat("Kariyer", "appearances", 694),
+                PlayerStat("Kariyer", "assists", 105),
+                PlayerStat("Premier League", "goals", 144),
+                PlayerStat("Premier League", "appearances", 280),
+                PlayerStat("Premier League", "assists", 53),
+                PlayerStat("Champions League", "goals", 25),
+                PlayerStat("International", "goals", 50),
+                PlayerStat("International", "appearances", 102)
+            )
+        ),
+
+        // === LA LIGA LEGENDS & STARS ===
+        Footballer(
+            id = "lionel-messi",
+            name = "Lionel Messi",
+            nationality = "Arjantin",
+            position = "Forvet / Kanat",
+            photoUrl = avatar("Lionel Messi"),
+            clubName = "Barcelona / PSG / Inter Miami",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Ligue 1", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 850),
+                PlayerStat("Kariyer", "appearances", 1080),
+                PlayerStat("Kariyer", "assists", 380),
+                PlayerStat("Kariyer", "trophies", 44),
+                PlayerStat("La Liga", "goals", 474),
+                PlayerStat("La Liga", "appearances", 520),
+                PlayerStat("La Liga", "assists", 192),
+                PlayerStat("Ligue 1", "goals", 22),
+                PlayerStat("Ligue 1", "appearances", 58),
+                PlayerStat("Ligue 1", "assists", 30),
+                PlayerStat("Champions League", "goals", 129),
+                PlayerStat("Champions League", "appearances", 163),
+                PlayerStat("International", "goals", 109),
+                PlayerStat("International", "appearances", 187)
+            )
+        ),
+        Footballer(
+            id = "cristiano-ronaldo",
+            name = "Cristiano Ronaldo",
+            nationality = "Portekiz",
+            position = "Forvet / Kanat",
+            photoUrl = avatar("Cristiano Ronaldo"),
+            clubName = "Real Madrid / Man Utd / Juventus",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Premier League", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 910),
+                PlayerStat("Kariyer", "appearances", 1250),
+                PlayerStat("Kariyer", "assists", 255),
+                PlayerStat("Kariyer", "trophies", 34),
+                PlayerStat("La Liga", "goals", 311),
+                PlayerStat("La Liga", "appearances", 292),
+                PlayerStat("La Liga", "assists", 88),
+                PlayerStat("Premier League", "goals", 103),
+                PlayerStat("Premier League", "appearances", 236),
+                PlayerStat("Premier League", "assists", 37),
+                PlayerStat("Serie A", "goals", 81),
+                PlayerStat("Serie A", "appearances", 98),
+                PlayerStat("Serie A", "assists", 17),
+                PlayerStat("Champions League", "goals", 140),
+                PlayerStat("Champions League", "appearances", 183),
+                PlayerStat("International", "goals", 132),
+                PlayerStat("International", "appearances", 212)
+            )
+        ),
+        Footballer(
+            id = "karim-benzema",
+            name = "Karim Benzema",
+            nationality = "Fransa",
+            position = "Forvet",
+            photoUrl = avatar("Karim Benzema"),
+            clubName = "Real Madrid / Lyon",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Ligue 1", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 465),
+                PlayerStat("Kariyer", "appearances", 915),
+                PlayerStat("Kariyer", "assists", 210),
+                PlayerStat("Kariyer", "trophies", 33),
+                PlayerStat("La Liga", "goals", 238),
+                PlayerStat("La Liga", "appearances", 439),
+                PlayerStat("La Liga", "assists", 119),
+                PlayerStat("Ligue 1", "goals", 43),
+                PlayerStat("Ligue 1", "appearances", 112),
+                PlayerStat("Champions League", "goals", 90),
+                PlayerStat("Champions League", "appearances", 152),
+                PlayerStat("International", "goals", 37),
+                PlayerStat("International", "appearances", 97)
+            )
+        ),
+        Footballer(
+            id = "luis-suarez",
+            name = "Luis Suárez",
+            nationality = "Uruguay",
+            position = "Forvet",
+            photoUrl = avatar("Luis Suarez"),
+            clubName = "Barcelona / Atletico / Liverpool",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 565),
+                PlayerStat("Kariyer", "appearances", 980),
+                PlayerStat("Kariyer", "assists", 298),
+                PlayerStat("La Liga", "goals", 176),
+                PlayerStat("La Liga", "appearances", 258),
+                PlayerStat("La Liga", "assists", 84),
+                PlayerStat("Premier League", "goals", 69),
+                PlayerStat("Premier League", "appearances", 110),
+                PlayerStat("Premier League", "assists", 23),
+                PlayerStat("Champions League", "goals", 27),
+                PlayerStat("Champions League", "appearances", 73),
+                PlayerStat("International", "goals", 69),
+                PlayerStat("International", "appearances", 143)
+            )
+        ),
+        Footballer(
+            id = "gareth-bale",
+            name = "Gareth Bale",
+            nationality = "Galler",
+            position = "Kanat",
+            photoUrl = avatar("Gareth Bale"),
+            clubName = "Real Madrid / Spurs",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 226),
+                PlayerStat("Kariyer", "appearances", 665),
+                PlayerStat("Kariyer", "assists", 161),
+                PlayerStat("La Liga", "goals", 81),
+                PlayerStat("La Liga", "appearances", 176),
+                PlayerStat("La Liga", "assists", 46),
+                PlayerStat("Premier League", "goals", 54),
+                PlayerStat("Premier League", "appearances", 166),
+                PlayerStat("Premier League", "assists", 22),
+                PlayerStat("Champions League", "goals", 16),
+                PlayerStat("International", "goals", 41),
+                PlayerStat("International", "appearances", 111)
+            )
+        ),
+        Footballer(
+            id = "luka-modric",
+            name = "Luka Modrić",
+            nationality = "Hırvatistan",
+            position = "Orta Saha",
+            photoUrl = avatar("Luka Modric"),
+            clubName = "Real Madrid / Spurs",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 120),
+                PlayerStat("Kariyer", "appearances", 1050),
+                PlayerStat("Kariyer", "assists", 180),
+                PlayerStat("Kariyer", "trophies", 31),
+                PlayerStat("La Liga", "goals", 28),
+                PlayerStat("La Liga", "appearances", 365),
+                PlayerStat("La Liga", "assists", 60),
+                PlayerStat("Premier League", "goals", 13),
+                PlayerStat("Premier League", "appearances", 127),
+                PlayerStat("Premier League", "assists", 21),
+                PlayerStat("Champions League", "goals", 9),
+                PlayerStat("Champions League", "appearances", 130),
+                PlayerStat("International", "goals", 27),
+                PlayerStat("International", "appearances", 178)
+            )
+        ),
+        Footballer(
+            id = "raul-gonzalez",
+            name = "Raúl González",
+            nationality = "İspanya",
+            position = "Forvet",
+            photoUrl = avatar("Raul Gonzalez"),
+            clubName = "Real Madrid / Schalke",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Bundesliga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 432),
+                PlayerStat("Kariyer", "appearances", 1034),
+                PlayerStat("Kariyer", "assists", 178),
+                PlayerStat("La Liga", "goals", 228),
+                PlayerStat("La Liga", "appearances", 550),
+                PlayerStat("La Liga", "assists", 99),
+                PlayerStat("Bundesliga", "goals", 28),
+                PlayerStat("Bundesliga", "appearances", 66),
+                PlayerStat("Champions League", "goals", 71),
+                PlayerStat("Champions League", "appearances", 142),
+                PlayerStat("International", "goals", 44),
+                PlayerStat("International", "appearances", 102)
+            )
+        ),
+        Footballer(
+            id = "antoine-griezmann",
+            name = "Antoine Griezmann",
+            nationality = "Fransa",
+            position = "Forvet / Kanat",
+            photoUrl = avatar("Antoine Griezmann"),
+            clubName = "Atlético Madrid / Barca",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 310),
+                PlayerStat("Kariyer", "appearances", 780),
+                PlayerStat("Kariyer", "assists", 155),
+                PlayerStat("La Liga", "goals", 185),
+                PlayerStat("La Liga", "appearances", 495),
+                PlayerStat("La Liga", "assists", 88),
+                PlayerStat("Champions League", "goals", 38),
+                PlayerStat("International", "goals", 44),
+                PlayerStat("International", "appearances", 137)
+            )
+        ),
+        Footballer(
+            id = "andres-iniesta",
+            name = "Andrés Iniesta",
+            nationality = "İspanya",
+            position = "Orta Saha",
+            photoUrl = avatar("Andres Iniesta"),
+            clubName = "Barcelona",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 105),
+                PlayerStat("Kariyer", "appearances", 1010),
+                PlayerStat("Kariyer", "assists", 195),
+                PlayerStat("Kariyer", "trophies", 35),
+                PlayerStat("La Liga", "goals", 35),
+                PlayerStat("La Liga", "appearances", 442),
+                PlayerStat("La Liga", "assists", 87),
+                PlayerStat("Champions League", "goals", 11),
+                PlayerStat("Champions League", "appearances", 130),
+                PlayerStat("International", "goals", 14),
+                PlayerStat("International", "appearances", 131)
+            )
+        ),
+        Footballer(
+            id = "xavi-hernandez",
+            name = "Xavi Hernández",
+            nationality = "İspanya",
+            position = "Orta Saha",
+            photoUrl = avatar("Xavi Hernandez"),
+            clubName = "Barcelona",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 120),
+                PlayerStat("Kariyer", "appearances", 1072),
+                PlayerStat("Kariyer", "assists", 238),
+                PlayerStat("Kariyer", "trophies", 33),
+                PlayerStat("La Liga", "goals", 58),
+                PlayerStat("La Liga", "appearances", 505),
+                PlayerStat("La Liga", "assists", 129),
+                PlayerStat("Champions League", "goals", 11),
+                PlayerStat("Champions League", "appearances", 151),
+                PlayerStat("International", "goals", 13),
+                PlayerStat("International", "appearances", 133)
+            )
+        ),
+        Footballer(
+            id = "sergio-ramos",
+            name = "Sergio Ramos",
+            nationality = "İspanya",
+            position = "Defans",
+            photoUrl = avatar("Sergio Ramos"),
+            clubName = "Real Madrid / Sevilla / PSG",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Ligue 1", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 140),
+                PlayerStat("Kariyer", "appearances", 1015),
+                PlayerStat("Kariyer", "trophies", 29),
+                PlayerStat("La Liga", "goals", 77),
+                PlayerStat("La Liga", "appearances", 516),
+                PlayerStat("Ligue 1", "goals", 4),
+                PlayerStat("Ligue 1", "appearances", 45),
+                PlayerStat("Champions League", "goals", 18),
+                PlayerStat("Champions League", "appearances", 142),
+                PlayerStat("International", "goals", 23),
+                PlayerStat("International", "appearances", 180)
+            )
+        ),
+        Footballer(
+            id = "iker-casillas",
+            name = "Iker Casillas",
+            nationality = "İspanya",
+            position = "Kaleci",
+            photoUrl = avatar("Iker Casillas"),
+            clubName = "Real Madrid / Porto",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "cleanSheets", 440),
+                PlayerStat("Kariyer", "appearances", 1048),
+                PlayerStat("La Liga", "cleanSheets", 177),
+                PlayerStat("La Liga", "appearances", 510),
+                PlayerStat("Champions League", "cleanSheets", 59),
+                PlayerStat("Champions League", "appearances", 177),
+                PlayerStat("International", "cleanSheets", 102),
+                PlayerStat("International", "appearances", 167)
+            )
+        ),
+        Footballer(
+            id = "vinicius-junior",
+            name = "Vinícius Júnior",
+            nationality = "Brezilya",
+            position = "Kanat",
+            photoUrl = avatar("Vinicius Junior"),
+            clubName = "Real Madrid",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 115),
+                PlayerStat("Kariyer", "appearances", 350),
+                PlayerStat("Kariyer", "assists", 82),
+                PlayerStat("La Liga", "goals", 58),
+                PlayerStat("La Liga", "appearances", 188),
+                PlayerStat("La Liga", "assists", 41),
+                PlayerStat("Champions League", "goals", 25),
+                PlayerStat("Champions League", "appearances", 58),
+                PlayerStat("International", "goals", 5),
+                PlayerStat("International", "appearances", 35)
+            )
+        ),
+
+        // === SERIE A LEGENDS & STARS ===
+        Footballer(
+            id = "zlatan-ibrahimovic",
+            name = "Zlatan Ibrahimović",
+            nationality = "İsveç",
+            position = "Forvet",
+            photoUrl = avatar("Zlatan Ibrahimovic"),
+            clubName = "Milan / Inter / PSG",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Ligue 1", "La Liga", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 573),
+                PlayerStat("Kariyer", "appearances", 988),
+                PlayerStat("Kariyer", "assists", 227),
+                PlayerStat("Kariyer", "trophies", 32),
+                PlayerStat("Serie A", "goals", 156),
+                PlayerStat("Serie A", "appearances", 283),
+                PlayerStat("Serie A", "assists", 68),
+                PlayerStat("Ligue 1", "goals", 113),
+                PlayerStat("Ligue 1", "appearances", 122),
+                PlayerStat("La Liga", "goals", 16),
+                PlayerStat("Premier League", "goals", 17),
+                PlayerStat("Champions League", "goals", 48),
+                PlayerStat("International", "goals", 62),
+                PlayerStat("International", "appearances", 122)
+            )
+        ),
+        Footballer(
+            id = "francesco-totti",
+            name = "Francesco Totti",
+            nationality = "İtalya",
+            position = "Forvet / Forvet Arkası",
+            photoUrl = avatar("Francesco Totti"),
+            clubName = "AS Roma",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 316),
+                PlayerStat("Kariyer", "appearances", 827),
+                PlayerStat("Kariyer", "assists", 205),
+                PlayerStat("Serie A", "goals", 250),
+                PlayerStat("Serie A", "appearances", 619),
+                PlayerStat("Serie A", "assists", 158),
+                PlayerStat("Champions League", "goals", 17),
+                PlayerStat("International", "goals", 9),
+                PlayerStat("International", "appearances", 58)
+            )
+        ),
+        Footballer(
+            id = "alessandro-del-piero",
+            name = "Alessandro Del Piero",
+            nationality = "İtalya",
+            position = "Forvet",
+            photoUrl = avatar("Alessandro Del Piero"),
+            clubName = "Juventus",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 343),
+                PlayerStat("Kariyer", "appearances", 868),
+                PlayerStat("Kariyer", "assists", 182),
+                PlayerStat("Serie A", "goals", 188),
+                PlayerStat("Serie A", "appearances", 478),
+                PlayerStat("Serie A", "assists", 112),
+                PlayerStat("Champions League", "goals", 42),
+                PlayerStat("International", "goals", 27),
+                PlayerStat("International", "appearances", 91)
+            )
+        ),
+        Footballer(
+            id = "andrea-pirlo",
+            name = "Andrea Pirlo",
+            nationality = "İtalya",
+            position = "Orta Saha",
+            photoUrl = avatar("Andrea Pirlo"),
+            clubName = "Milan / Juventus / Inter",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 86),
+                PlayerStat("Kariyer", "appearances", 872),
+                PlayerStat("Kariyer", "assists", 156),
+                PlayerStat("Kariyer", "trophies", 18),
+                PlayerStat("Serie A", "goals", 58),
+                PlayerStat("Serie A", "appearances", 493),
+                PlayerStat("Serie A", "assists", 106),
+                PlayerStat("Champions League", "goals", 8),
+                PlayerStat("Champions League", "appearances", 108),
+                PlayerStat("International", "goals", 13),
+                PlayerStat("International", "appearances", 116)
+            )
+        ),
+        Footballer(
+            id = "gianluigi-buffon",
+            name = "Gianluigi Buffon",
+            nationality = "İtalya",
+            position = "Kaleci",
+            photoUrl = avatar("Gianluigi Buffon"),
+            clubName = "Juventus / Parma / PSG",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Ligue 1", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "cleanSheets", 501),
+                PlayerStat("Kariyer", "appearances", 1151),
+                PlayerStat("Kariyer", "trophies", 28),
+                PlayerStat("Serie A", "cleanSheets", 299),
+                PlayerStat("Serie A", "appearances", 657),
+                PlayerStat("Ligue 1", "cleanSheets", 6),
+                PlayerStat("Ligue 1", "appearances", 17),
+                PlayerStat("Champions League", "cleanSheets", 53),
+                PlayerStat("Champions League", "appearances", 124),
+                PlayerStat("International", "cleanSheets", 77),
+                PlayerStat("International", "appearances", 176)
+            )
+        ),
+        Footballer(
+            id = "ciro-immobile",
+            name = "Ciro Immobile",
+            nationality = "İtalya",
+            position = "Forvet",
+            photoUrl = avatar("Ciro Immobile"),
+            clubName = "Lazio / Beşiktaş / Dortmund",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Bundesliga", "La Liga", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 335),
+                PlayerStat("Kariyer", "appearances", 630),
+                PlayerStat("Kariyer", "assists", 78),
+                PlayerStat("Serie A", "goals", 201),
+                PlayerStat("Serie A", "appearances", 353),
+                PlayerStat("Serie A", "assists", 52),
+                PlayerStat("Bundesliga", "goals", 3),
+                PlayerStat("Bundesliga", "appearances", 24),
+                PlayerStat("International", "goals", 17),
+                PlayerStat("International", "appearances", 57)
+            )
+        ),
+        Footballer(
+            id = "lautaro-martinez",
+            name = "Lautaro Martínez",
+            nationality = "Arjantin",
+            position = "Forvet",
+            photoUrl = avatar("Lautaro Martinez"),
+            clubName = "Inter Milan",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 195),
+                PlayerStat("Kariyer", "appearances", 410),
+                PlayerStat("Kariyer", "assists", 54),
+                PlayerStat("Serie A", "goals", 112),
+                PlayerStat("Serie A", "appearances", 220),
+                PlayerStat("Serie A", "assists", 32),
+                PlayerStat("Champions League", "goals", 15),
+                PlayerStat("Champions League", "appearances", 48),
+                PlayerStat("International", "goals", 32),
+                PlayerStat("International", "appearances", 70)
+            )
+        ),
+        Footballer(
+            id = "andriy-shevchenko",
+            name = "Andriy Shevchenko",
+            nationality = "Ukrayna",
+            position = "Forvet",
+            photoUrl = avatar("Andriy Shevchenko"),
+            clubName = "Milan / Chelsea / Kiev",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 391),
+                PlayerStat("Kariyer", "appearances", 821),
+                PlayerStat("Kariyer", "assists", 120),
+                PlayerStat("Serie A", "goals", 127),
+                PlayerStat("Serie A", "appearances", 226),
+                PlayerStat("Serie A", "assists", 38),
+                PlayerStat("Premier League", "goals", 9),
+                PlayerStat("Premier League", "appearances", 48),
+                PlayerStat("Champions League", "goals", 48),
+                PlayerStat("Champions League", "appearances", 100),
+                PlayerStat("International", "goals", 48),
+                PlayerStat("International", "appearances", 111)
+            )
+        ),
+        Footballer(
+            id = "antonio-di-natale",
+            name = "Antonio Di Natale",
+            nationality = "İtalya",
+            position = "Forvet",
+            photoUrl = avatar("Antonio Di Natale"),
+            clubName = "Udinese / Empoli",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 311),
+                PlayerStat("Kariyer", "appearances", 721),
+                PlayerStat("Kariyer", "assists", 92),
+                PlayerStat("Serie A", "goals", 209),
+                PlayerStat("Serie A", "appearances", 445),
+                PlayerStat("Serie A", "assists", 76),
+                PlayerStat("International", "goals", 11),
+                PlayerStat("International", "appearances", 42)
+            )
+        ),
+        Footballer(
+            id = "paulo-dybala",
+            name = "Paulo Dybala",
+            nationality = "Arjantin",
+            position = "Forvet / Forvet Arkası",
+            photoUrl = avatar("Paulo Dybala"),
+            clubName = "Roma / Juventus / Palermo",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 192),
+                PlayerStat("Kariyer", "appearances", 515),
+                PlayerStat("Kariyer", "assists", 95),
+                PlayerStat("Serie A", "goals", 128),
+                PlayerStat("Serie A", "appearances", 335),
+                PlayerStat("Serie A", "assists", 68),
+                PlayerStat("Champions League", "goals", 18),
+                PlayerStat("International", "goals", 4),
+                PlayerStat("International", "appearances", 40)
+            )
+        ),
+
+        // === BUNDESLIGA LEGENDS & STARS ===
+        Footballer(
+            id = "robert-lewandowski",
+            name = "Robert Lewandowski",
+            nationality = "Polonya",
+            position = "Forvet",
+            photoUrl = avatar("Robert Lewandowski"),
+            clubName = "Bayern München / Dortmund / Barca",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Bundesliga", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 665),
+                PlayerStat("Kariyer", "appearances", 940),
+                PlayerStat("Kariyer", "assists", 185),
+                PlayerStat("Kariyer", "trophies", 29),
+                PlayerStat("Bundesliga", "goals", 312),
+                PlayerStat("Bundesliga", "appearances", 384),
+                PlayerStat("Bundesliga", "assists", 75),
+                PlayerStat("La Liga", "goals", 56),
+                PlayerStat("La Liga", "appearances", 82),
+                PlayerStat("Champions League", "goals", 99),
+                PlayerStat("Champions League", "appearances", 122),
+                PlayerStat("International", "goals", 84),
+                PlayerStat("International", "appearances", 156)
+            )
+        ),
+        Footballer(
+            id = "thomas-muller",
+            name = "Thomas Müller",
+            nationality = "Almanya",
+            position = "Forvet / Forvet Arkası",
+            photoUrl = avatar("Thomas Muller"),
+            clubName = "Bayern München",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Bundesliga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 305),
+                PlayerStat("Kariyer", "appearances", 890),
+                PlayerStat("Kariyer", "assists", 270),
+                PlayerStat("Kariyer", "trophies", 33),
+                PlayerStat("Bundesliga", "goals", 150),
+                PlayerStat("Bundesliga", "appearances", 480),
+                PlayerStat("Bundesliga", "assists", 192),
+                PlayerStat("Champions League", "goals", 54),
+                PlayerStat("Champions League", "appearances", 152),
+                PlayerStat("International", "goals", 45),
+                PlayerStat("International", "appearances", 131)
+            )
+        ),
+        Footballer(
+            id = "gerd-muller",
+            name = "Gerd Müller",
+            nationality = "Almanya",
+            position = "Forvet",
+            photoUrl = avatar("Gerd Muller"),
+            clubName = "Bayern München",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Bundesliga", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 735),
+                PlayerStat("Kariyer", "appearances", 793),
+                PlayerStat("Kariyer", "assists", 106),
+                PlayerStat("Bundesliga", "goals", 365),
+                PlayerStat("Bundesliga", "appearances", 427),
+                PlayerStat("International", "goals", 68),
+                PlayerStat("International", "appearances", 62)
+            )
+        ),
+        Footballer(
+            id = "marco-reus",
+            name = "Marco Reus",
+            nationality = "Almanya",
+            position = "Kanat / Forvet Arkası",
+            photoUrl = avatar("Marco Reus"),
+            clubName = "Borussia Dortmund / Gladbach",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Bundesliga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 242),
+                PlayerStat("Kariyer", "appearances", 630),
+                PlayerStat("Kariyer", "assists", 164),
+                PlayerStat("Bundesliga", "goals", 156),
+                PlayerStat("Bundesliga", "appearances", 391),
+                PlayerStat("Bundesliga", "assists", 118),
+                PlayerStat("Champions League", "goals", 24),
+                PlayerStat("International", "goals", 15),
+                PlayerStat("International", "appearances", 48)
+            )
+        ),
+        Footballer(
+            id = "manuel-neuer",
+            name = "Manuel Neuer",
+            nationality = "Almanya",
+            position = "Kaleci",
+            photoUrl = avatar("Manuel Neuer"),
+            clubName = "Bayern München / Schalke",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Bundesliga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "cleanSheets", 380),
+                PlayerStat("Kariyer", "appearances", 870),
+                PlayerStat("Kariyer", "trophies", 31),
+                PlayerStat("Bundesliga", "cleanSheets", 225),
+                PlayerStat("Bundesliga", "appearances", 508),
+                PlayerStat("Champions League", "cleanSheets", 58),
+                PlayerStat("Champions League", "appearances", 143),
+                PlayerStat("International", "cleanSheets", 51),
+                PlayerStat("International", "appearances", 124)
+            )
+        ),
+        Footballer(
+            id = "arjen-robben",
+            name = "Arjen Robben",
+            nationality = "Hollanda",
+            position = "Kanat",
+            photoUrl = avatar("Arjen Robben"),
+            clubName = "Bayern / Chelsea / Real Madrid",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Bundesliga", "Premier League", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 246),
+                PlayerStat("Kariyer", "appearances", 650),
+                PlayerStat("Kariyer", "assists", 160),
+                PlayerStat("Bundesliga", "goals", 99),
+                PlayerStat("Bundesliga", "appearances", 201),
+                PlayerStat("Bundesliga", "assists", 62),
+                PlayerStat("Premier League", "goals", 15),
+                PlayerStat("Premier League", "appearances", 67),
+                PlayerStat("La Liga", "goals", 11),
+                PlayerStat("La Liga", "appearances", 50),
+                PlayerStat("Champions League", "goals", 31),
+                PlayerStat("International", "goals", 37),
+                PlayerStat("International", "appearances", 96)
+            )
+        ),
+        Footballer(
+            id = "franck-ribery",
+            name = "Franck Ribéry",
+            nationality = "Fransa",
+            position = "Kanat",
+            photoUrl = avatar("Franck Ribery"),
+            clubName = "Bayern München / Marsilya / Fiorentina",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Bundesliga", "Ligue 1", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 175),
+                PlayerStat("Kariyer", "appearances", 715),
+                PlayerStat("Kariyer", "assists", 245),
+                PlayerStat("Bundesliga", "goals", 86),
+                PlayerStat("Bundesliga", "appearances", 273),
+                PlayerStat("Bundesliga", "assists", 121),
+                PlayerStat("Ligue 1", "goals", 18),
+                PlayerStat("Ligue 1", "appearances", 68),
+                PlayerStat("Serie A", "goals", 5),
+                PlayerStat("Serie A", "appearances", 73),
+                PlayerStat("Champions League", "goals", 18),
+                PlayerStat("International", "goals", 16),
+                PlayerStat("International", "appearances", 81)
+            )
+        ),
+        Footballer(
+            id = "erling-haaland",
+            name = "Erling Haaland",
+            nationality = "Norveç",
+            position = "Forvet",
+            photoUrl = avatar("Erling Haaland"),
+            clubName = "Man City / Dortmund / Salzburg",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Premier League", "Bundesliga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 278),
+                PlayerStat("Kariyer", "appearances", 335),
+                PlayerStat("Kariyer", "assists", 56),
+                PlayerStat("Premier League", "goals", 90),
+                PlayerStat("Premier League", "appearances", 96),
+                PlayerStat("Premier League", "assists", 15),
+                PlayerStat("Bundesliga", "goals", 62),
+                PlayerStat("Bundesliga", "appearances", 67),
+                PlayerStat("Bundesliga", "assists", 19),
+                PlayerStat("Champions League", "goals", 44),
+                PlayerStat("Champions League", "appearances", 42),
+                PlayerStat("International", "goals", 38),
+                PlayerStat("International", "appearances", 39)
+            )
+        ),
+
+        // === LIGUE 1 LEGENDS & STARS ===
+        Footballer(
+            id = "kylian-mbappe",
+            name = "Kylian Mbappé",
+            nationality = "Fransa",
+            position = "Forvet",
+            photoUrl = avatar("Kylian Mbappe"),
+            clubName = "Real Madrid / PSG / Monaco",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Ligue 1", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 345),
+                PlayerStat("Kariyer", "appearances", 475),
+                PlayerStat("Kariyer", "assists", 158),
+                PlayerStat("Ligue 1", "goals", 191),
+                PlayerStat("Ligue 1", "appearances", 246),
+                PlayerStat("Ligue 1", "assists", 78),
+                PlayerStat("La Liga", "goals", 24),
+                PlayerStat("La Liga", "appearances", 26),
+                PlayerStat("Champions League", "goals", 49),
+                PlayerStat("Champions League", "appearances", 74),
+                PlayerStat("International", "goals", 48),
+                PlayerStat("International", "appearances", 86)
+            )
+        ),
+        Footballer(
+            id = "neymar-jr",
+            name = "Neymar Jr",
+            nationality = "Brezilya",
+            position = "Kanat / Forvet",
+            photoUrl = avatar("Neymar Jr"),
+            clubName = "Santos / Barca / PSG / Al Hilal",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Ligue 1", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 439),
+                PlayerStat("Kariyer", "appearances", 710),
+                PlayerStat("Kariyer", "assists", 270),
+                PlayerStat("Ligue 1", "goals", 82),
+                PlayerStat("Ligue 1", "appearances", 112),
+                PlayerStat("Ligue 1", "assists", 50),
+                PlayerStat("La Liga", "goals", 68),
+                PlayerStat("La Liga", "appearances", 123),
+                PlayerStat("La Liga", "assists", 49),
+                PlayerStat("Champions League", "goals", 43),
+                PlayerStat("Champions League", "appearances", 81),
+                PlayerStat("International", "goals", 79),
+                PlayerStat("International", "appearances", 128)
+            )
+        ),
+        Footballer(
+            id = "edinson-cavani",
+            name = "Edinson Cavani",
+            nationality = "Uruguay",
+            position = "Forvet",
+            photoUrl = avatar("Edinson Cavani"),
+            clubName = "PSG / Napoli / Man Utd",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Ligue 1", "Serie A", "Premier League", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 442),
+                PlayerStat("Kariyer", "appearances", 825),
+                PlayerStat("Kariyer", "assists", 92),
+                PlayerStat("Ligue 1", "goals", 138),
+                PlayerStat("Ligue 1", "appearances", 200),
+                PlayerStat("Serie A", "goals", 112),
+                PlayerStat("Serie A", "appearances", 213),
+                PlayerStat("Premier League", "goals", 12),
+                PlayerStat("La Liga", "goals", 5),
+                PlayerStat("Champions League", "goals", 35),
+                PlayerStat("International", "goals", 58),
+                PlayerStat("International", "appearances", 136)
+            )
+        ),
+        Footballer(
+            id = "alexandre-lacazette",
+            name = "Alexandre Lacazette",
+            nationality = "Fransa",
+            position = "Forvet",
+            photoUrl = avatar("Alexandre Lacazette"),
+            clubName = "Lyon / Arsenal",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Ligue 1", "Premier League", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 280),
+                PlayerStat("Kariyer", "appearances", 605),
+                PlayerStat("Kariyer", "assists", 88),
+                PlayerStat("Ligue 1", "goals", 148),
+                PlayerStat("Ligue 1", "appearances", 270),
+                PlayerStat("Premier League", "goals", 54),
+                PlayerStat("Premier League", "appearances", 158),
+                PlayerStat("Champions League", "goals", 9),
+                PlayerStat("International", "goals", 3),
+                PlayerStat("International", "appearances", 16)
+            )
+        ),
+        Footballer(
+            id = "angel-di-maria",
+            name = "Ángel Di María",
+            nationality = "Arjantin",
+            position = "Kanat",
+            photoUrl = avatar("Angel Di Maria"),
+            clubName = "PSG / Real Madrid / Benfica",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Ligue 1", "La Liga", "Premier League", "Serie A", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 215),
+                PlayerStat("Kariyer", "appearances", 875),
+                PlayerStat("Kariyer", "assists", 290),
+                PlayerStat("Kariyer", "trophies", 34),
+                PlayerStat("Ligue 1", "goals", 56),
+                PlayerStat("Ligue 1", "appearances", 197),
+                PlayerStat("Ligue 1", "assists", 72),
+                PlayerStat("La Liga", "goals", 22),
+                PlayerStat("La Liga", "appearances", 124),
+                PlayerStat("Premier League", "goals", 3),
+                PlayerStat("Serie A", "goals", 4),
+                PlayerStat("Champions League", "goals", 23),
+                PlayerStat("International", "goals", 31),
+                PlayerStat("International", "appearances", 145)
+            )
+        ),
+        Footballer(
+            id = "wissam-ben-yedder",
+            name = "Wissam Ben Yedder",
+            nationality = "Fransa",
+            position = "Forvet",
+            photoUrl = avatar("Wissam Ben Yedder"),
+            clubName = "Monaco / Sevilla / Toulouse",
+            eligibleCompetitions = listOf("Kariyer", "5 Büyük Lig", "Ligue 1", "La Liga", "Champions League", "International"),
+            stats = listOf(
+                PlayerStat("Kariyer", "goals", 265),
+                PlayerStat("Kariyer", "appearances", 540),
+                PlayerStat("Kariyer", "assists", 74),
+                PlayerStat("Ligue 1", "goals", 161),
+                PlayerStat("Ligue 1", "appearances", 315),
+                PlayerStat("La Liga", "goals", 38),
+                PlayerStat("La Liga", "appearances", 91),
+                PlayerStat("Champions League", "goals", 10),
+                PlayerStat("International", "goals", 3),
+                PlayerStat("International", "appearances", 19)
+            )
+        )
+    )
+}

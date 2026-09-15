@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Target Ring -->
+    <path
+        android:pathData="M54,54m-27,0a27,27 0 1,0 54,0a27,27 0 1,0 -54,0"
+        android:strokeWidth="2.5"
+        android:strokeColor="#F5C451" />
+    <!-- Middle Ring -->
+    <path
+        android:pathData="M54,54m-19,0a19,19 0 1,0 38,0a19,19 0 1,0 -38,0"
+        android:strokeWidth="1.8"
+        android:strokeColor="#80F5C451" />
+    <!-- Crosshairs -->
+    <path
+        android:pathData="M54,23v7 M54,78v7 M23,54h7 M78,54h7"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeColor="#20B878" />
+    <!-- Central Football Shape -->
+    <path
+        android:pathData="M54,54m-13,0a13,13 0 1,0 26,0a13,13 0 1,0 -26,0"
+        android:fillColor="#F0FDF4" />
+    <!-- Central Pentagon -->
+    <path
+        android:pathData="M54,46 L60,50 L58,57 L50,57 L48,50 Z"
+        android:fillColor="#0B301E" />
+    <!-- Ball Seams connecting pentagon to edge -->
+    <path
+        android:pathData="M54,46 L54,41 M60,50 L65,49 M58,57 L62,63 M50,57 L46,63 M48,50 L43,49"
+        android:strokeWidth="1.6"
+        android:strokeColor="#0B301E"
+        android:strokeLineCap="round" />
+</vector>
