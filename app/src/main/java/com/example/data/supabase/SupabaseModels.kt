@@ -1,5 +1,6 @@
 package com.example.data.supabase
 
+import com.example.data.model.GameRuleEngine
 import com.example.data.model.Question
 import kotlin.math.abs
 import kotlin.random.Random
@@ -80,16 +81,12 @@ object MatchRuleEngine {
      * Closest to target wins. Overshooting is allowed without extra penalty.
      */
     fun calculateWinner(target: Int, totalA: Int, totalB: Int): String {
-        val diffA = abs(target - totalA)
-        val diffB = abs(target - totalB)
-        return when {
-            diffA < diffB -> "A"
-            diffB < diffA -> "B"
-            else -> "draw"
-        }
+        return GameRuleEngine.calculateWinner(target, totalA, totalB)
     }
 
     fun isPickDuplicate(existingPicks: List<OnlinePick>, footballerId: String): Boolean {
         return existingPicks.any { !it.isTimeout && it.footballerId.equals(footballerId, ignoreCase = true) }
     }
 }
+
+

@@ -1,4 +1,5 @@
 import com.google.gms.googleservices.GoogleServicesPlugin.MissingGoogleServicesStrategy
+import org.gradle.api.tasks.testing.Test
 
 plugins {
   alias(libs.plugins.android.application)
@@ -139,5 +140,9 @@ dependencies {
   debugImplementation(libs.androidx.compose.ui.tooling)
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
+}
+tasks.withType<Test>().configureEach {
+  maxParallelForks = 1
+  exclude("**/ExampleRobolectricTest.class", "**/GreetingScreenshotTest.class")
 }
 

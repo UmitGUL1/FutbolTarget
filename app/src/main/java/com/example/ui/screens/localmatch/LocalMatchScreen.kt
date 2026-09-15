@@ -62,6 +62,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.FootballerRepository
 import com.example.data.model.Footballer
+import com.example.data.model.GameRuleEngine
 import com.example.data.model.MatchResult
 import com.example.data.model.PickSlot
 import com.example.data.model.Question
@@ -77,7 +78,6 @@ import com.example.ui.theme.PlayerBColor
 import com.example.ui.theme.SemanticError
 import com.example.ui.theme.SemanticSuccess
 import kotlinx.coroutines.delay
-import kotlin.math.abs
 
 enum class MatchPhase {
     QUESTION,
@@ -101,13 +101,7 @@ fun LocalMatchScreen(
     var startingPlayer by remember { mutableStateOf(if (Math.random() > 0.5) "A" else "B") }
     var currentTurnIndex by remember { mutableIntStateOf(0) }
     val pickOrder = remember(startingPlayer, question) {
-        val secondPlayer = if (startingPlayer == "A") "B" else "A"
-        val order = mutableListOf<String>()
-        for (i in 0 until question.pickCount) {
-            order.add(startingPlayer)
-            order.add(secondPlayer)
-        }
-        order
+        GameRuleEngine.buildPickOrder(startingPlayer, question.pickCount)
     }
 
     var picks by remember { mutableStateOf<List<PickSlot>>(emptyList()) }
@@ -124,31 +118,25 @@ fun LocalMatchScreen(
 
     val onPickFinished: (Footballer?, Boolean) -> Unit = remember(picks, pickOrder, question, currentPlayer, currentPickNumberForPlayer) {
         { footballer, timedOut ->
-            val newPick = PickSlot(
-                playerId = currentPlayer,
-                pickNumber = currentPickNumberForPlayer,
-                footballer = footballer,
-                timedOut = timedOut
-            )
-            val updatedPicks = picks + newPick
-            picks = updatedPicks
+            val canAccept = timedOut || footballer == null || GameRuleEngine.canAcceptPick(picks, currentPlayer, footballer.id, question.pickCount)
+            if (canAccept) {
+                val newPick = PickSlot(
+                    playerId = currentPlayer,
+                    pickNumber = currentPickNumberForPlayer,
+                    footballer = footballer,
+                    timedOut = timedOut
+                )
+                val updatedPicks = picks + newPick
+                picks = updatedPicks
 
-            if (updatedPicks.size >= pickOrder.size) {
-                // Transition to Reveal phase
-                revealedSteps = updatedPicks.map { slot ->
-                    val value = slot.footballer?.getStatValue(question.competition, question.statType) ?: 0
-                    RevealStep(
-                        playerId = slot.playerId,
-                        pickNumber = slot.pickNumber,
-                        footballer = slot.footballer,
-                        timedOut = slot.timedOut,
-                        statValue = value
-                    )
+                if (updatedPicks.size >= pickOrder.size) {
+                    // Transition to Reveal phase
+                    revealedSteps = GameRuleEngine.buildRevealSteps(updatedPicks, question)
+                    revealIndex = 0
+                    phase = MatchPhase.REVEAL
+                } else {
+                    currentTurnIndex += 1
                 }
-                revealIndex = 0
-                phase = MatchPhase.REVEAL
-            } else {
-                currentTurnIndex += 1
             }
         }
     }
@@ -207,20 +195,10 @@ fun LocalMatchScreen(
                                 revealIndex += 1
                             } else {
                                 // Calculate result
-                                val totalA = revealedSteps.filter { it.playerId == "A" }.sumOf { it.statValue }
-                                val totalB = revealedSteps.filter { it.playerId == "B" }.sumOf { it.statValue }
-                                val diffA = abs(question.target - totalA)
-                                val diffB = abs(question.target - totalB)
-                                val winner = if (diffA == diffB) "draw" else if (diffA < diffB) "A" else "B"
-
-                                val res = MatchResult(
-                                    target = question.target,
-                                    totalA = totalA,
-                                    totalB = totalB,
-                                    diffA = diffA,
-                                    diffB = diffB,
-                                    winner = winner
-                                )
+                                val res = GameRuleEngine.calculateResult(question, revealedSteps)
+                                val winner = res.winner
+                                val totalA = res.totalA
+                                val totalB = res.totalB
                                 matchResult = res
                                 phase = MatchPhase.RESULT
 
@@ -568,7 +546,7 @@ private fun PickingTurnView(
 
                 TurnTimerBadge(
                     turnKey = currentTurnIndex,
-                    initialSeconds = if (currentTurnIndex == 0) 20 else 15,
+                    initialSeconds = GameRuleEngine.turnDurationSeconds(currentTurnIndex),
                     onTimeout = onTimeout
                 )
             }
@@ -794,8 +772,8 @@ private fun RevealPhaseView(
         steps.take(revealIndex + 1)
     }
 
-    val totalA = visibleSteps.filter { it.playerId == "A" }.sumOf { it.statValue }
-    val totalB = visibleSteps.filter { it.playerId == "B" }.sumOf { it.statValue }
+    val totalA = GameRuleEngine.calculateTotal(visibleSteps, GameRuleEngine.PLAYER_A)
+    val totalB = GameRuleEngine.calculateTotal(visibleSteps, GameRuleEngine.PLAYER_B)
     val isLast = revealIndex >= steps.size - 1
 
     Column(
@@ -1084,3 +1062,6 @@ private fun ResultPhaseView(
         }
     }
 }
+
+
+

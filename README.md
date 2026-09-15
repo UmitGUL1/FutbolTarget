@@ -20,3 +20,19 @@ View your app in AI Studio: https://ai.studio/apps/9b4893f2-2bc1-4396-a391-4ebbe
 5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
 6. Run the app on an emulator or physical device
 7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+## Automated Tests
+
+Run the fast game rule, flow, and stress tests:
+
+```powershell
+.\gradlew.bat testGame --no-daemon
+```
+
+Build the debug APK and run the important automated tests together:
+
+```powershell
+.\gradlew.bat testAll --no-daemon
+```
+
+The core game rules live in `GameRuleEngine`, so local match behavior and tests use the same winner, reveal, duplicate-pick, timeout, ranked-score, and reconnect-timeout logic.
+

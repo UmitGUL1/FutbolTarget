@@ -2,6 +2,7 @@ package com.example.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.data.model.GameRuleEngine
 import com.example.data.model.MatchHistoryItem
 import com.example.data.model.Profile
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -54,37 +55,7 @@ class UserPreferencesRepository(context: Context) {
         result: String
     ) {
         val currentProfile = _profile.value
-        var wins = currentProfile.wins
-        var losses = currentProfile.losses
-        var draws = currentProfile.draws
-        var rankPoints = currentProfile.rankPoints
-        var rank = currentProfile.rank
-
-        when (result) {
-            "win" -> {
-                wins += 1
-                rankPoints += 1
-                if (rankPoints >= 5) {
-                    rank = getNextRank(rank)
-                    rankPoints = 0
-                }
-            }
-            "loss" -> {
-                losses += 1
-                if (rankPoints > 0) rankPoints -= 1
-            }
-            "draw" -> {
-                draws += 1
-            }
-        }
-
-        val updatedProfile = currentProfile.copy(
-            wins = wins,
-            losses = losses,
-            draws = draws,
-            rankPoints = rankPoints,
-            rank = rank
-        )
+        val updatedProfile = GameRuleEngine.applyRankedResult(currentProfile, result)
         saveProfile(updatedProfile)
 
         val newItem = MatchHistoryItem(
@@ -207,3 +178,5 @@ class UserPreferencesRepository(context: Context) {
         _matchHistory.value = history
     }
 }
+
+
